@@ -120,9 +120,13 @@ return [
     |
     */
 
-    'log' => env('APP_LOG', 'single'),
+    'LOG_CHANNEL' => 'stack',
+    'LOG_SLACK_WEBHOOK_URL' => '',
 
-    'log_level' => env('APP_LOG_LEVEL', 'debug'),
+
+    // 'log' => env('APP_LOG', 'single'),
+
+    // 'log_level' => env('APP_LOG_LEVEL', 'debug'),
 
     /*
     |--------------------------------------------------------------------------
@@ -162,6 +166,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Laravel\Tinker\TinkerServiceProvider::class,
 
         /*
          * Package Service Providers...

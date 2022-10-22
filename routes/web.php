@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\FirstController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +13,4 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [FirstController::class, 'index'])->name('index');
