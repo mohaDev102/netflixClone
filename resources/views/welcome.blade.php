@@ -10,8 +10,9 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
     <!-- Styles -->
+    <script src="{{ asset('js/app.js') }}" ></script>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet" >
     <style>
         html,
         body {
@@ -78,7 +79,7 @@
             position: relative;
             right: 0;
             top: 0;
-            transition background-color: .5s;
+            transition: background-color .5s;
             width: 100%;
             z-index: 10;
         }
@@ -105,7 +106,8 @@
             padding: .5rem;
             fill: #e50914;
         }
-        .titulo{
+
+        .titulo {
             max-width: 950px;
             color: #ffffff;
             margin: 0px auto;
@@ -113,10 +115,14 @@
             padding: 75px 0;
 
         }
-        h1,h2,h3{
+        /* 
+        h1,
+        h2,
+        h3 {
             font-size: 4rem;
-        }
-        .btn{
+        } */
+
+        .btn {
             text-decoration: none;
             color: #ffffff;
             background-color: #e50914;
@@ -124,17 +130,18 @@
             border-radius: 3px;
             font-weight: 600;
         }
-        .transparencia{
+
+        .transparencia {
             position: absolute;
             top: 0;
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(0,0,0,.4);
-            background-image: linear-gradient(0deg,rgba(0,0,0,.8) 0,transparent 60%,rgba(0,0,0,.8));
+            background: rgba(0, 0, 0, .4);
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, .8) 0, transparent 60%, rgba(0, 0, 0, .8));
         }
 
-        .cabecera{
+        .cabecera {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -145,23 +152,23 @@
             margin: 0 3.5rem;
         }
 
-        .logo{
+        .logo {
             margin-right: auto;
         }
 
-        .idioma select{
+        .idioma select {
             background-color: transparent;
             padding: 7px 12px;
             color: #ffffff;
         }
 
-        .background-img{
+        .background-img {
             height: 100%;
             width: 100%;
             object-fit: cover;
         }
 
-        .img{
+        .img {
             top: 0;
             bottom: 0;
             left: 0;
@@ -169,27 +176,75 @@
             height: 390px;
         }
 
-        @media only screen and (min-width: 1450px){
-            .primerTitulo{
+        .primerTitulo {
+            font-size: 4rem;
+            margin: 0 auto;
+            line-height: 1.1;
+        }
+
+        @media only screen and (min-width: 1450px) {
+            .primerTitulo {
                 max-width: 800px;
             }
         }
-        @media only screen and (min-width: 1450px){
-            .imagen-fondo{
+
+        @media only screen and (min-width: 1450px) {
+            .imagen-fondo {
                 top: -100px;
             }
         }
-        @media only screen and (min-width: 1450px){
-            .content{
+
+        @media only screen and (min-width: 1450px) {
+            .content {
                 padding: 70px 45px;
             }
         }
-        
+
+        @media screen and (min-width: 740px) {
+            h1 {
+                font-size: 38px;
+            }
+        }
+
+        .button-form{
+            border: none;
+            padding: 27px 69.7px;
+            cursor: pointer;
+            border-radius: 0;
+        }
+        .button-form:hover{
+            background-color: #e50911;
+        }
+
+        .input-form{
+            padding: 25px 190px;
+        }
+
+        .tercerTitulo{
+            /* font-weight: 400; */
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        @media only screen and (min-width: 1450px){
+            .tercerTitulo{
+                font-size: 1.2rem;
+                padding-bottom: 20px;
+            }
+            .form{
+                max-width: 950px;
+                padding-top: .85rem;
+            }
+        }
+
+
+
+
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <div class="">
         <div class="header">
             <div class="cabecera">
                 <span class="logo">
@@ -199,25 +254,37 @@
                         </g>
                     </svg>
                 </span>
-              
                 <div class="idioma">
                     <select name="lang">
                         <option value="1">Español</option>
                         <option value="2">English</option>
                     </select>
                 </div>
-                <a class="btn" href="/login">Iniciar sesión</a> 
+                <a class="btn" href="/login">Iniciar sesión</a>
             </div>
         </div>
         <div class="content">
             <div class="imagen-fondo">
-                <div class="img">
+                <div class="img" style="height: 827.8px;">
                     <img class="concord-img vlv-creative background-img" src="https://assets.nflxext.com/ffe/siteui/vlv3/79fe83d4-7ef6-4181-9439-46db72599559/33195bfc-7f65-4308-8869-677efc451cad/ES-es-20221017-popsignuptwoweeks-perspective_alpha_website_small.jpg" srcset="https://assets.nflxext.com/ffe/siteui/vlv3/79fe83d4-7ef6-4181-9439-46db72599559/33195bfc-7f65-4308-8869-677efc451cad/ES-es-20221017-popsignuptwoweeks-perspective_alpha_website_small.jpg 1000w, https://assets.nflxext.com/ffe/siteui/vlv3/79fe83d4-7ef6-4181-9439-46db72599559/33195bfc-7f65-4308-8869-677efc451cad/ES-es-20221017-popsignuptwoweeks-perspective_alpha_website_medium.jpg 1500w, https://assets.nflxext.com/ffe/siteui/vlv3/79fe83d4-7ef6-4181-9439-46db72599559/33195bfc-7f65-4308-8869-677efc451cad/ES-es-20221017-popsignuptwoweeks-perspective_alpha_website_large.jpg 1800w" alt="">
                     <div class="transparencia"></div>
                 </div>
             </div>
             <div class="titulo">
                 <h1 class="primerTitulo">Todas las películas y series que desees, y mucho más.</h1>
+                <h2 class="segundoTitulo">Disfruta donde quieras. Cancela cuando quieras.</h2>
+                <form class="form" action="" method="POST">
+                    <h3 class="tercerTitulo">¿Quieres ver algo ya? Escribe tu dirección de correo para crear una suscripción a Netflix o reactivarla.</h3>
+                   @csrf
+                    <!-- falta la nomenclatura para poder enviar formulario -->
+                    <div class="row">
+                        <div class="col-md-12 input-group">
+                            <label class="form-group">dirección de correo</label>
+                            <input class="input-form" type="text" class="form-group">
+                            <button class="btn button-form" type="submit" name="registrar">Empezar ></button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
