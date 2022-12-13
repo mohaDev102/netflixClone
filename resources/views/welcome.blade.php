@@ -11,236 +11,11 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <!-- Styles -->
-    <script src="{{ asset('js/app.js') }}" ></script>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet" >
-    <style>
-        html,
-        body {
-            background-color: #fff;
-            color: #000000;
-            font-family: 'Raleway', sans-serif;
-            font-weight: 100;
-            height: 100vh;
-            margin: 0;
-            font-size: 16px;
-
-        }
-
-        .full-height {
-            height: 100vh;
-        }
-
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .position-ref {
-            position: relative;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
-
-        .content {
-            text-align: center;
-            position: relative;
-        }
-
-        .title {
-            font-size: 84px;
-        }
-
-        .links>a {
-            color: #636b6f;
-            padding: 0 25px;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-
-        .m-b-md {
-            margin-bottom: 30px;
-        }
-
-        .header {
-            bottom: 0;
-            height: 5rem;
-            left: 0;
-            margin: 0 auto;
-            max-width: 1920px;
-            padding-top: 20px;
-            position: relative;
-            right: 0;
-            top: 0;
-            transition: background-color .5s;
-            width: 100%;
-            z-index: 10;
-        }
-
-        .imagen-fondo {
-            overflow: hidden;
-            position: absolute;
-            z-index: 0;
-            top: -70px;
-            left: 0;
-            right: 0;
-            bottom: 0;
-        }
-
-        .dimension {
-            width: 1903px;
-            height: 827px;
-        }
-
-        .svg-icon {
-            width: 167px;
-            height: 45px;
-            z-index: 1;
-            padding: .5rem;
-            fill: #e50914;
-        }
-
-        .titulo {
-            max-width: 950px;
-            color: #ffffff;
-            margin: 0px auto;
-            position: relative;
-            padding: 75px 0;
-
-        }
-        /* 
-        h1,
-        h2,
-        h3 {
-            font-size: 4rem;
-        } */
-
-        .btn {
-            text-decoration: none;
-            color: #ffffff;
-            background-color: #e50914;
-            padding: 7px 13px;
-            border-radius: 3px;
-            font-weight: 600;
-        }
-
-        .transparencia {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, .4);
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, .8) 0, transparent 60%, rgba(0, 0, 0, .8));
-        }
-
-        .cabecera {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            top: 0;
-            position: relative;
-            right: 12px;
-            gap: 26px;
-            margin: 0 3.5rem;
-        }
-
-        .logo {
-            margin-right: auto;
-        }
-
-        .idioma select {
-            background-color: transparent;
-            padding: 7px 12px;
-            color: #ffffff;
-        }
-
-        .background-img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-        }
-
-        .img {
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 390px;
-        }
-
-        .primerTitulo {
-            font-size: 4rem;
-            margin: 0 auto;
-            line-height: 1.1;
-        }
-
-        @media only screen and (min-width: 1450px) {
-            .primerTitulo {
-                max-width: 800px;
-            }
-        }
-
-        @media only screen and (min-width: 1450px) {
-            .imagen-fondo {
-                top: -100px;
-            }
-        }
-
-        @media only screen and (min-width: 1450px) {
-            .content {
-                padding: 70px 45px;
-            }
-        }
-
-        @media screen and (min-width: 740px) {
-            h1 {
-                font-size: 38px;
-            }
-        }
-
-        .button-form{
-            border: none;
-            padding: 27px 69.7px;
-            cursor: pointer;
-            border-radius: 0;
-        }
-        .button-form:hover{
-            background-color: #e50911;
-        }
-
-        .input-form{
-            padding: 25px 190px;
-        }
-
-        .tercerTitulo{
-            /* font-weight: 400; */
-            margin: 0 auto;
-            padding: 0 5%;
-        }
-
-        @media only screen and (min-width: 1450px){
-            .tercerTitulo{
-                font-size: 1.2rem;
-                padding-bottom: 20px;
-            }
-            .form{
-                max-width: 950px;
-                padding-top: .85rem;
-            }
-        }
-
-
-
-
-    </style>
+    <!-- <script src="{{ asset('js/app.js') }}" ></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
+    
 </head>
 
 <body>
@@ -257,7 +32,7 @@
                 <div class="idioma">
                     <select name="lang">
                         <option value="1">Español</option>
-                        <option value="2">English</option>
+                        <option value="2"><a href="{{ __('traduccion.ingles') }}">English</a></option>
                     </select>
                 </div>
                 <a class="btn" href="/login">Iniciar sesión</a>
@@ -273,21 +48,178 @@
             <div class="titulo">
                 <h1 class="primerTitulo">Todas las películas y series que desees, y mucho más.</h1>
                 <h2 class="segundoTitulo">Disfruta donde quieras. Cancela cuando quieras.</h2>
-                <form class="form" action="" method="POST">
-                    <h3 class="tercerTitulo">¿Quieres ver algo ya? Escribe tu dirección de correo para crear una suscripción a Netflix o reactivarla.</h3>
-                   @csrf
-                    <!-- falta la nomenclatura para poder enviar formulario -->
-                    <div class="row">
-                        <div class="col-md-12 input-group">
-                            <label class="form-group">dirección de correo</label>
-                            <input class="input-form" type="text" class="form-group">
-                            <button class="btn button-form" type="submit" name="registrar">Empezar ></button>
-                        </div>
-                    </div>
-                </form>
+                @include('layouts.registro')
             </div>
         </div>
+        <div class="textoImagen">
+            <div class="row justify-content-center align-items-center primerBloque">
+                <div class="col-md-6">
+                   <h2 class="tituloSecond">{{ __('traduccion.primertitulo') }}</h2>
+                   <p class="p1">Smart TV, Playstation, Xbox, Chromecast, Apple TV, reproductores Blu-ray y muchos más.</p>
+                </div>
+                <div class="col-md-6 dimencion">
+                    <div class="imgVideo">
+                        <img class="tv1" loading="lazy" aria-label="imagen tv de fondo" src="{{ asset('assets/img/tv.png')}}" alt="{{asset('assets/img/tv.png')}}" />
+                        <div class="videoTV">
+                            <video autoplay playsinline muted loop>
+                                <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="imagenTexto">
+            <div class="row justify-content-center align-items-center primerBloque textFirst">
+                <div class="col-md-6">
+                    <div class="imagen">
+                        <img src="{{ asset('assets/img/imagen2.jpg')}}" loading="lazy" alt="imagen stranger things" />
+                        <div class="animacion">
+                            <img class="mx-2 serie" src="{{ asset('assets/img/serie.png') }}" loading="lazy" alt="imagen serie stranger things" />
+                            <div class="texto">
+                                <h6>Stranger Things</h6>
+                                <p style="color: blue;">Descargándose...</p>
+                            </div>
+                            <div class="animacion-img me-4">
+                                <img src="{{ asset('assets/img/animacion.gif') }}" alt="animacion circulo"  />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="h2">Descárgate tus series favoritas para verlas sin conexión.</h2>
+                    <p class="p2">Guarda tus títulos favoritos fácilmente para que siempre tengas algo para ver.</p>
+                </div>
+            </div>
+        </div>
+        <div class="textoImagen">
+            <div class="row align-items-center primerBloque">
+                <div class="col-md-6">
+                    <h2 class="tituloSecond">Disfruta en todas partes.</h2>
+                    <p class="p2">Reproduce en streaming todas las películas y series en tu móvil, tableta, ordenador y TV sin pagar más.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="videoImg">
+                        <img class="tv1" src="{{ asset('assets/img/tercera.png') }}" alt="imagen 3 stranger things" />
+                        <div class="video">
+                            <video class="videoAnimado" autoplay playsinline muted loop>
+                                <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="imagenTexto">
+            <div class="row align-items-center primerBloque textFirst">
+                <div class="col-md-6">
+                    <div class="imagenInfantil">
+                        <img src="{{ asset('assets/img/infantil.png') }}" alt="infantil" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="tituloSecond">Crea perfiles infantiles.</h2>
+                    <p class="p3">Deja que los niños vivan aventuras con sus personajes favoritos en un espacio diseñado exclusivamente para ellos, gratis con tu suscripción.</p>
+                </div>
+            </div>
+        </div>
+        <div class="faqs">
+            <div class="text">
+                <div class="row justify-content-center align-items-center text-center primerBloque">
+                    <h2 class="tituloSecond">Preguntas frecuentes</h2>
+                    <ul class="faq mt-4">
+                        <li class="list">
+                            <button class="button">
+                                ¿Qué es Netflix?
+                            </button>
+                            <div class="descripcion oculto">
+                               <p class="p-descripcion"> Netflix es un servicio de streaming que ofrece una amplia variedad de series,
+                                películas, títulos de anime, documentales y otros contenidos premiados en miles de dispositivos conectados a internet.</p>
+                               <p class="p-descripcion"> Puedes ver todo el contenido que quieras, cuando quieras y sin un solo anuncio por una tarifa mensual reducida. 
+                                ¡Siempre hay algo nuevo que descubrir, y cada semana se añaden nuevas series y películas! </p>
+                            </div>
+                        </li>
+                        <li class="list">
+                            <button class="button">
+                                ¿Cuánto cuesta Netflix?
+                            </button>
+                            <div class="descripcion oculto">
+                               <p class="p-descripcion"> Disfruta de Netflix en tu smartphone, tableta, Smart TV, 
+                                ordenador o dispositivo de streaming, todo por una tarifa
+                                mensual fija. Planes desde 7,99 € a 17,99 € al mes. Sin cargos
+                                adicionales ni contratos. </p>
+                            </div>
+                        </li>
+                    </ul>
+                    @include('layouts.registro')
+                </div>
+               
+            </div>
+           
+        </div>
+       
+        <div class="footer">
+            <footer>
+                <h5 class="mb-3">
+                    ¿Preguntas? Lama al 900 822 376
+                </h5>
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="list-footer">
+                            <li><a href="#" >Preguntas frecuentes</a></li>
+                            <li><a href="#" >Inversores</a></li>
+                            <li><a href="#" >Formas de ver</a></li>
+                            <li><a href="#" >Información corporativa</a></li>
+                            <li><a href="#" >Avisos legales</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <ul class="list-footer">
+                            <li><a href="#" >Centro de ayuda</a></li>
+                            <li><a href="#" >Empleo</a></li>
+                            <li><a href="#" >Términos de uso</a></li>
+                            <li><a href="#" >Contáctanos</a></li>
+                            <li><a href="#" >Solo en Netflix</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <ul class="list-footer">
+                            <li><a href="#" >Cuenta</a></li>
+                            <li><a href="#" >Canjear tarjetas regalo</a></li>
+                            <li><a href="#" >Privacidad</a></li>
+                            <li><a href="#" >Prueba de velocidad</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <ul class="list-footer"> 
+                            <li><a href="#" >Zona de prensa</a></li>
+                            <li><a href="#" >Comprar tarjetas regalo</a></li>
+                            <li><a href="#" >Preferencias de cookies</a></li>
+                            <li><a href="#" >Garantía legal</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+     
     </div>
 </body>
+<script type="text/javascript">
 
+    $('.button').click(function(){
+
+        elementoTexto = $(this).next();
+        if($(elementoTexto).hasClass('oculto') &&  !$(elementoTexto).hasClass('activo')){
+                $('.descripcion').removeClass('activo');
+                $('.descripcion').addClass('oculto');
+                $(elementoTexto).removeClass('oculto');
+                $(elementoTexto).addClass('activo');
+        }else{
+                $(elementoTexto).addClass('oculto');
+                $(elementoTexto).removeClass('activo');
+        }
+    });
+
+</script>
 </html>
